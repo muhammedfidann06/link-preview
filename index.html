@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Link Preview</title>
+  <meta name="description" content="See how a link looks when it's shared, and which meta tags are missing.">
+  <meta property="og:title" content="Link Preview">
+  <meta property="og:description" content="See how a link looks when it's shared, and which meta tags are missing.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>🖼️ Link Preview</h1>
+      <p class="subtitle">See how a link looks when you share it, and which meta tags it's missing.</p>
+    </header>
+
+    <form id="preview-form">
+      <input type="url" id="url-input" placeholder="https://example.com" required>
+      <button type="submit" id="go-btn">Preview</button>
+    </form>
+
+    <p id="status" class="status"></p>
+
+    <section id="output" class="hidden">
+      <h2>Chat message</h2>
+      <div class="chat">
+        <div class="bubble">
+          <a id="chat-link" class="bubble-url" target="_blank" rel="noopener"></a>
+          <div class="chat-card">
+            <img class="p-image" alt="">
+            <div class="chat-text">
+              <strong class="p-title"></strong>
+              <p class="p-desc"></p>
+              <span class="p-host"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2>Social post</h2>
+      <div class="social-card">
+        <img class="p-image" alt="">
+        <div class="social-text">
+          <span class="p-host"></span>
+          <strong class="p-title"></strong>
+          <p class="p-desc"></p>
+        </div>
+      </div>
+
+      <h2>Search result</h2>
+      <div class="search-result">
+        <div class="search-site">
+          <img class="p-logo" alt="">
+          <div>
+            <span class="p-publisher"></span>
+            <span class="p-url"></span>
+          </div>
+        </div>
+        <strong class="p-title"></strong>
+        <p class="p-desc"></p>
+      </div>
+
+      <h2>Meta tag check</h2>
+      <ul id="checks" class="checks"></ul>
+
+      <h2>Suggested tags</h2>
+      <div class="code-box">
+        <button id="copy-btn" class="copy">Copy</button>
+        <pre><code id="snippet"></code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Made by <a href="https://github.com/muhammedfidann06">Muhammed Fidan</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
